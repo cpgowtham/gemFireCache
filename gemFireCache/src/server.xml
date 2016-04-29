@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cache PUBLIC
+  "-//GemStone Systems, Inc.//GemFire Declarative Caching 7.0//EN"
+  "http://www.gemstone.com/dtd/cache7_0.dtd">
+<cache>
+<cache-server port="42402" maximum-time-between-pings="300000" notify-by-subscription="true">
+</cache-server>
+	<region name="employee" refid="REPLICATE">
+		<region-attributes>
+			<cache-loader>
+				<class-name>com.loader.ServerLoader</class-name>
+			</cache-loader>
+			<cache-listener>
+				<class-name>com.listener.ServerListener</class-name>
+			</cache-listener>
+		</region-attributes>
+	</region>
+</cache>
